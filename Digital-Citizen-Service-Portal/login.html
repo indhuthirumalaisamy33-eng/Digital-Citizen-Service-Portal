@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Citizen Login</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-landmark"></i>
+
+            <span>Digital Citizen</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="track.html">
+                Track Application
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- LOGIN -->
+
+    <section class="form-page">
+
+
+        <div class="form-container login-container">
+
+
+            <div class="form-header">
+
+
+                <div class="form-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <h1>
+                    Citizen Login
+                </h1>
+
+
+                <p>
+                    Login to access your digital services.
+                </p>
+
+
+            </div>
+
+
+
+            <form id="loginForm">
+
+
+                <div class="input-group">
+
+                    <label>
+                        Email or Mobile Number
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="loginIdentifier"
+                        placeholder="Enter email or mobile number"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="input-group">
+
+                    <label>
+                        Password
+                    </label>
+
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                        >
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div id="loginMessage"></div>
+
+
+
+                <button
+                    type="submit"
+                    class="form-submit"
+                >
+
+                    Login
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+
+                <p class="form-footer-text">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+                        Create Account
+                    </a>
+
+                </p>
+
+
+            </form>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Digital Citizen Service Portal
+            </p>
+
+
+            <p>
+                Academic Project – Not an Official Government Portal
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

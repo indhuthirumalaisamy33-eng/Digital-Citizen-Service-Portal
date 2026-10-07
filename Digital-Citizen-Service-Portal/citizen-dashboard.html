@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Citizen Dashboard</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-landmark"></i>
+
+            <span>
+                Digital Citizen
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="citizen-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="my-applications.html">
+                My Applications
+            </a>
+
+            <a href="notifications.html">
+                Notifications
+            </a>
+
+            <button
+                onclick="logoutUser()"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard">
+
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <p>
+                    CITIZEN DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome, <span id="userName">
+                        Citizen
+                    </span> 👋
+                </h1>
+
+                <span>
+                    Manage your digital services and applications.
+                </span>
+
+            </div>
+
+
+            <a
+                href="services.html"
+                class="primary-btn"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Apply for Service
+
+            </a>
+
+        </div>
+
+
+
+        <!-- STAT CARDS -->
+
+        <div class="dashboard-cards">
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon blue">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        My Applications
+                    </span>
+
+                    <h2 id="applicationCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon orange">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <h2 id="pendingCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Approved
+                    </span>
+
+                    <h2 id="approvedCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon red">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <h2 id="notificationCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- QUICK SERVICES -->
+
+        <div class="dashboard-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        Quick Services
+                    </h2>
+
+                    <p>
+                        Access frequently used services.
+                    </p>
+
+                </div>
+
+                <a href="services.html">
+                    View All
+                </a>
+
+            </div>
+
+
+
+            <div class="quick-services">
+
+
+                <a
+                    href="apply.html?service=Birth%20Certificate"
+                    class="quick-card"
+                >
+
+                    <i class="fa-solid fa-cake-candles"></i>
+
+                    <h3>
+                        Birth Certificate
+                    </h3>
+
+                    <span>
+                        Apply Online →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="apply.html?service=Income%20Certificate"
+                    class="quick-card"
+                >
+
+                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                    <h3>
+                        Income Certificate
+                    </h3>
+
+                    <span>
+                        Apply Online →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="apply.html?service=Community%20Certificate"
+                    class="quick-card"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3>
+                        Community Certificate
+                    </h3>
+
+                    <span>
+                        Apply Online →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="apply.html?service=Residence%20Certificate"
+                    class="quick-card"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <h3>
+                        Residence Certificate
+                    </h3>
+
+                    <span>
+                        Apply Online →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFILE -->
+
+        <div class="dashboard-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        My Profile
+                    </h2>
+
+                    <p>
+                        Your registered information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-box">
+
+                <div>
+
+                    <strong>
+                        Full Name
+                    </strong>
+
+                    <p id="profileName">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Email
+                    </strong>
+
+                    <p id="profileEmail">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Mobile
+                    </strong>
+
+                    <p id="profileMobile">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Address
+                    </strong>
+
+                    <p id="profileAddress">
+                        -
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Digital Citizen Service Portal
+            </p>
+
+            <p>
+                Academic Project – Not an Official Government Portal
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
